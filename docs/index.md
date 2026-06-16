@@ -26,11 +26,14 @@ Markdown
 <summary>【Unity-Avatar】久々に開いたUnityプロジェクトがセーフモードを推奨してくるとき Part1</summary>
 
 ### 概要
+
 アバター改変のため、久々のプロジェクトを開こうとすると、Unityがセーフモードで実行するように推奨してきた。<br>
 そのままセーフモードで起動すると、コンソールに以下のエラーログが出ていた。
+
 ```
 Assets\nHaruka\PCSS4VRC\Script\Runtime\PCSS4VRC_NDMF.cs(67,39): error CS0246: The type or namespace name 'PCSS4VRC_MaterialAnimationCreator' could not be found (are you missing a using directive or an assembly reference?)
 ```
+
 `error CS0246`：名前は出てくるが、その中身（クラスや型）がどこに定義されているのか不明な状態。
 
 ### 原因
