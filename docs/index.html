@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRChat トラブル＆Tips集</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🛠️ VRChat トラブル ＆ Tips集</h1>
+
+    <div id="tips-container"></div>
+
+    <script src="data.js"></script>
+    <script>
+        // data.jsのデータを元に、HTMLを自動生成する魔法のコード
+        const container = document.getElementById('tips-container');
+        
+        vrcData.forEach(item => {
+            const details = document.createElement('details');
+            
+            // 枠組みを組み立て（HTMLタグをそのまま流し込む innerHTML を使用）
+            details.innerHTML = `
+                <summary>${item.title}</summary>
+                <div class="content">
+                    ${item.body}
+                </div>
+            `;
+            
+            container.appendChild(details);
+        });
+    </script>
+</body>
+</html>
