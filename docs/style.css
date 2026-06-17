@@ -1,45 +1,97 @@
+/* 全体のベース設定（GitHub公式ダークモードの背景色と文字色） */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     padding: 20px;
-    background-color: #f8f9fa;
-    color: #333333;
+    background-color: #0d1117; /* 深いダークグレー */
+    color: #c9d1d9;            /* 明るい薄グレーの文字 */
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* タイトル（大見出し） */
 h1 {
     font-size: 20pt;
-    border-bottom: 2px solid #e0e0e0;
+    color: #f0f6fc;            /* ほぼ白に近い文字色 */
+    border-bottom: 2px solid #21262d; /* すっきりした境界線 */
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
+
+/* 🌟 プルダウン全体の枠組み */
 details {
-    background: #ffffff;
+    background: #161b22;       /* 背景よりほんの少し明るいボックス */
     margin-bottom: 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    border: 1px solid #30363d; /* GitHubっぽい細いグレーの枠線 */
     overflow: hidden;
 }
+
+/* 🌟 クリックするタイトル部分 */
 summary {
     font-size: 11pt;
     font-weight: bold;
     padding: 15px;
     cursor: pointer;
     user-select: none;
+    color: #c9d1d9;
+    background-color: #161b22;
+    transition: background-color 0.2s, color 0.2s;
 }
+
+/* タイトルにマウスを乗せたとき（PC用） */
 summary:hover {
-    background-color: #edf2f7;
+    background-color: #21262d; /* さらに一歩明るいグレーに */
+    color: #58a6ff;            /* 文字が綺麗なGitHubブルーに変化！ */
 }
+
+/* プルダウンが開いているときのタイトルの背景 */
 details[open] summary {
-    background-color: #f7fafc;
-    border-bottom: 1px solid #edf2f7;
+    background-color: #1f242c;
+    border-bottom: 1px solid #30363d;
 }
+
+/* 🌟 開いた中身のエリア */
 .content {
     padding: 15px;
+    background-color: #161b22;
 }
-/* 中身のタグに対するデザイン */
-.content h3 { font-size: 11pt; color: #2d3748; margin: 15px 0 5px 0; }
-.content h3:first-child { margin-top: 0; }
-.content p, .content li { font-size: 10.5pt; line-height: 1.6; margin-top: 0; }
-.content pre { background: #2d3748; color: #f7fafc; padding: 12px; border-radius: 6px; overflow-x: auto; margin-top: 5px; }
-.content code { font-family: monospace; font-size: 10pt; }
+
+/* 中身の見出し（h3） */
+.content h3 { 
+    font-size: 11pt; 
+    color: #f0f6fc; 
+    margin: 15px 0 5px 0; 
+}
+.content h3:first-child { 
+    margin-top: 0; 
+}
+
+/* 本文や箇条書きの文字 */
+.content p, .content li { 
+    font-size: 10.5pt; 
+    line-height: 1.6; 
+    color: #c9d1d9;
+    margin-top: 0; 
+}
+
+/* <strong>タグで囲んだ強調文字（Jekyllっぽく薄い赤オレンジに！） */
+.content strong {
+    color: #ff7b72; 
+}
+
+/* 💻 コードブロック（``` の代わり） */
+.content pre { 
+    background: #21262d;       /* コードの背景を一段明るく */
+    color: #e6edf3;
+    padding: 12px; 
+    border-radius: 6px; 
+    border: 1px solid #30363d;
+    overflow-x: auto;          /* はみ出したら横スクロール */
+    margin-top: 5px; 
+}
+
+/* コードのフォント */
+.content code { 
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 10pt; 
+}
